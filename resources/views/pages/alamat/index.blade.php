@@ -36,31 +36,39 @@
                     Edit
                     </a>
                 </h5> --}}
+                {{-- @if ($user =! null)     --}}
                 <div class="card-body">
                     <div class="row">
                         <div class="col-6 ml-5">
                             <h5 class="card-title">Nama Jalan dan Daerah</h5>
-                        <p class="card-text">{{ $user->address_one }}</p>
+                        <p class="card-text">{{ $user->address_one ?? null}}</p>
                         <h5 class="card-title">Alamat Rumah</h5>
-                        <p class="card-text">{{ $user->address_two }}</p>
+                        <p class="card-text">{{ $user->address_two ?? null}}</p>
                         <h5 class="card-title">Nomor HP</h5>
-                        <p class="card-text">{{ $user->phone_number }}</p>
+                        <p class="card-text">{{ $user->phone_number ?? null}}</p>
                         </div>
                         <div class="col-4 ml-auto">
                         <h5 class="card-title">Provinsi</h5>
                         <p class="card-text">
-                            {{ App\Models\Province::find($user->provinces_id)->name }}
+                            {{ App\Models\Province::find($user->provinces_id)->name ?? null}}
                         </p>
                         <h5 class="card-title">Kota/Kabupaten</h5>
                         <p class="card-text">
-                            {{ App\Models\City::find($user->city_id)->name }}
+                            {{ App\Models\City::find($user->city_id)->name ?? null}}
                         </p>
                         <h5 class="card-title">Kode Pos</h5>
-                        <p class="card-text">{{ $user->zip_code }}</p>
+                        <p class="card-text">{{ $user->zip_code ?? null}}</p>
                         </div>
-
                     </div>
                 </div>
+                {{-- @else
+                <div class="card-body">
+                    <div class="row">
+                        <h5>Edit Untuk Mengisi Alamat</h5>
+                    </div>
+                </div>
+                @endif --}}
+
                 </div>
             </div>
         </div>

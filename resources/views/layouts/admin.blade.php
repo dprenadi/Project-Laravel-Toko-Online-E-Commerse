@@ -48,11 +48,11 @@
               class="list-group-item list-group-item-action {{ request()->is('admin/product-gallery*') ? 'active' : '' }}"
               >Product Gallery</a
             >
-            <a
+            {{-- <a
               href="/admin/discount"
               class="list-group-item list-group-item-action {{ request()->is('admin/product-gallery*') ? 'active' : '' }}"
               >Product Discount</a
-            >
+            > --}}
             <a
               href="/admin/transaction"
               class="list-group-item list-group-item-action"

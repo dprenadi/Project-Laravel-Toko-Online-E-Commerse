@@ -94,9 +94,10 @@ Route::group(['middleware' => ['auth']], function() {
     Route::delete('/cart/{id}', [CartController::class, 'delete'])->name('cart-delete');
     
     Route::get('/transaction', [TransactionDetailController::class, 'index']);
-    Route::get('/transaction/{id}', [TransactionDetailController::class, 'detail']);
+    Route::get('/transaction/{id}', [TransactionDetailController::class, 'detail'])->name('transaction-detail');
+    Route::post('/transaction/{id}', [TransactionDetailController::class, 'update'])->name('transaction-update');
 
-    //Checkout
+//Checkout
     Route::post('/checkout', [CheckoutController::class, 'process'])->name('checkout');
 
     //Alamat

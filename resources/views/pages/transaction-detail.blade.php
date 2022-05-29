@@ -135,8 +135,8 @@
                   </div>
                 </div>
               </div>
-              {{-- {{ route('dashboard-transaction-update', $transaction->id) }} --}}
-              <form action="" method="POST" enctype="multipart/form-data">
+              
+              <form action="{{ route('transaction-update', $transaction->id) }}" method="POST" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
                   <div class="col-12 mt-4">
@@ -185,7 +185,7 @@
                           class="form-control"
                           v-model="status">
                           <option value="PENDING">Pending</option>
-                          <option value="SHIPPING">Shipping</option>
+                          {{-- <option value="SHIPPING">Shipping</option> --}}
                           <option value="SUCCESS">Success</option>
                         </select>
                       </div>
@@ -226,6 +226,7 @@
                     </div>
                   </div>
                 </div>
+                @can('admin')    
                 <div class="row mt-4">
                   <div class="col-12 text-right">
                     <button
@@ -235,6 +236,7 @@
                     </button>
                   </div>
                 </div>
+                @endcan
               </form>
             </div>
           </div>

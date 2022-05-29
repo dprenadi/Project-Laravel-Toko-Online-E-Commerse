@@ -68,10 +68,10 @@ Dashboard Store Page
                 {{-- <div class="col-md-3">
                  Name
                 </div> --}}
-                <div class="col-md-3">
+                <div class="col-md-4">
                  Date
                 </div>
-                <div class="col-md-2 text-center">
+                <div class="col-md-4 text-center">
                  Jumlah
                 </div>
                 <div class="col-md-4 text-center">
@@ -108,10 +108,10 @@ Dashboard Store Page
                         {{-- <div class="col-md-3">
                           {{ $transaction_count }}
                         </div> --}}
-                        <div class="col-md-3">
+                        <div class="col-md-4">
                           {{ $transaction->created_at->format('Y-m-d') }}
                         </div>
-                        <div class="col-md-2 text-center">
+                        <div class="col-md-4 text-center">
                           {{ $transaction->total_qty}}
                         </div>
                         <div class="col-md-4 text-center">

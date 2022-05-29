@@ -22,7 +22,7 @@ class Transactions extends Migration
             $table->integer('shipping_price');
             // $table->integer('cost');
             $table->integer('total_qty')->nullable();
-            $table->integer('net_price')->nullable();
+            // $table->integer('net_price')->nullable();
             $table->string('courier')->nullable();
             $table->integer('total_price');
             $table->string('transaction_status');

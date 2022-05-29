@@ -51,14 +51,14 @@ class TransactionDetailController extends Controller
         ]);
     }
 
-    // public function update(Request $request, $id)
-    // {
-    //     $data = $request->all();
+    public function update(Request $request, $id)
+    {
+        $data = $request->all();
 
-    //     $item = TransactionDetail::findOrFail($id);
+        $item = TransactionDetail::findOrFail($id);
 
-    //     $item->update($data);
+        $item->update($data);
 
-    //     return redirect()->route('dashboard-transaction-details', $id);
-    // }
+        return redirect()->route('transaction-detail', $id);
+    }
 }

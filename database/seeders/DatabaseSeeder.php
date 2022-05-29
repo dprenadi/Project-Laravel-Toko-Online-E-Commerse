@@ -23,18 +23,68 @@ class DatabaseSeeder extends Seeder
             'password' => bcrypt('123456'),
             'roles' => 'ADMIN'
         ]);
-
+        //1
         User::create([
-            'name' => 'Hayasaka Ai',
-            'email' => 'hayasaka@gmail.com',
+            'name' => 'Ramdan Fauzi',
+            'email' => 'ramdan.f@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //2
+        User::create([
+            'name' => 'Adam Ikhlal Fahrezi',
+            'email' => 'adam@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //3
+        User::create([
+            'name' => 'Wira Nugraha',
+            'email' => 'wira00@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //4
+        User::create([
+            'name' => 'Didi Junaedi',
+            'email' => 'dijun@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //5
+        User::create([
+            'name' => 'Alifia Afnan',
+            'email' => 'Afnan.fia@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //6
+        User::create([
+            'name' => 'Rizal Maulana',
+            'email' => 'rizal.vml@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //7
+        User::create([
+            'name' => 'Rahmawati Kartika Putri',
+            'email' => 'rahkar@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //8
+        User::create([
+            'name' => 'Chessa Sefa Aqila',
+            'email' => 'chessa.sefa@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //9
+        User::create([
+            'name' => 'Farah Shafira Firmanto',
+            'email' => 'farah.sha@gmail.com',
+            'password' => bcrypt('123456')
+        ]);
+        //10
+        User::create([
+            'name' => 'Fathur Rodzi Firmanto',
+            'email' => 'fathur04@gmail.com',
             'password' => bcrypt('123456')
         ]);
 
-        User::create([
-            'name' => 'Arthuria Pendragon',
-            'email' => 'pendragon@gmail.com',
-            'password' => bcrypt('123456')
-        ]);
+        User::factory(100)->create();
 
         $this->call(LocationsTableSeeder::class);
 
@@ -44,7 +94,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -53,7 +103,24 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+
+        	Product::create([
+            'name' => 'Anggur Jupiter',
+            'slug' => 'anggur-jupiter',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '80000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+		Product::create([
+            'name' => 'Anggur Ninel',
+            'slug' => 'anggur-ninel',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '90000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -62,7 +129,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -71,7 +138,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -80,7 +147,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -89,7 +156,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
         
         Product::create([
@@ -98,7 +165,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -107,7 +174,88 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '1',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+
+        Product::create([
+            'name' => 'Anggur Black Phanter',
+            'slug' => 'anggur-black-phanter',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '100000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Anggur Julian',
+            'slug' => 'anggur-julian',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '90000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Anggur Harold',
+            'slug' => 'anggur-harold',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '80000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Anggur Victor',
+            'slug' => 'anggur-victor',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '80000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Durian Petruk',
+            'slug' => 'durian-petruk',
+            'users_id' => '1',
+            'categories_id' => '6',
+            'price' => '85000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Durian Matahari',
+            'slug' => 'durian-matahari',
+            'users_id' => '1',
+            'categories_id' => '6',
+            'price' => '30000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Durian Mimang',
+            'slug' => 'durian-mimang',
+            'users_id' => '1',
+            'categories_id' => '6',
+            'price' => '25000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Anggur Dixon',
+            'slug' => 'anggur-dixon',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '80000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Anggur Banana',
+            'slug' => 'anggur-banana',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '50000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Anggur Taldun',
+            'slug' => 'anggur-taldun',
+            'users_id' => '1',
+            'categories_id' => '4',
+            'price' => '40000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -116,7 +264,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '2',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -125,7 +273,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '2',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -134,7 +282,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '2',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -143,7 +291,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '2',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -152,7 +300,16 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '2',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+
+        Product::create([
+            'name' => 'Durian Pelangi',
+            'slug' => 'durian-pelangi',
+            'users_id' => '1',
+            'categories_id' => '6',
+            'price' => '100000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -161,7 +318,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '2',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         
@@ -171,7 +328,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '3',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -180,7 +337,40 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '3',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+
+        Product::create([
+            'name' => 'Jeruk Santang',
+            'slug' => 'jeruk-santang',
+            'users_id' => '1',
+            'categories_id' => '5',
+            'price' => '12500',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Jeruk Siam Bali',
+            'slug' => 'jeruk-siam-bali',
+            'users_id' => '1',
+            'categories_id' => '5',
+            'price' => '14500',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Jeruk Medan',
+            'slug' => 'jeruk-medan',
+            'users_id' => '1',
+            'categories_id' => '5',
+            'price' => '12500',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Jeruk Mandarin',
+            'slug' => 'jeruk-mandarin',
+            'users_id' => '1',
+            'categories_id' => '5',
+            'price' => '33000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -189,7 +379,7 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '3',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
 
         Product::create([
@@ -198,7 +388,23 @@ class DatabaseSeeder extends Seeder
             'users_id' => '1',
             'categories_id' => '3',
             'price' => '20000',
-            'description' => 'Fruits are important sources of dietary fibre, vitamins (especially vitamin C), and antioxidants. Although fresh fruits are subject to spoilage, their shelf life can be extended by refrigeration or by the removal of oxygen from their storage or packaging containers. Fruits can be processed into juices, jams, and jellies and preserved by dehydration, canning, fermentation, and pickling. Waxes, such as those from bayberries (wax myrtles), and vegetable ivory from the hard fruits of a South American palm species (Phytelephas macrocarpa) are important fruit-derived products. Various drugs come from fruits, such as morphine from the fruit of the opium poppy.'
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Durian Merah',
+            'slug' => 'durian-merah',
+            'users_id' => '1',
+            'categories_id' => '6',
+            'price' => '40000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
+        ]);
+        Product::create([
+            'name' => 'Durian Musang King',
+            'slug' => 'durian-musang-king',
+            'users_id' => '1',
+            'categories_id' => '6',
+            'price' => '280000',
+            'description' => '<p>Selamat Datang di Toko Buah Online! Penuhi kebutuhan dapur Anda dengan berbelanja di sini. Belanja praktis, pesan hari ini besok langsung diantar! Harga murah kualitas Premium!</p><p>DESKRIPSI PENGIRIMAN - (PENTING!)Pesanan hari ini 00:00 - 23:59 dikirim besok (H+1)</p><p>Start pengiriman setiap harinya pk. 08:00 (mengikuti antrian dan sistem pengantaran)</p><p>Kami menjamin kesegaran produk yang kami kirim setiap harinya. Setelah datang, kami bersihkan dan siapkan untuk dikirimkan ke pelanggan. Maka tertulis dalam DESKRIPSI PENGIRIMAN, keterangan waktu pemesanan dan pengiriman belanjaan Anda. Buah yang Anda terima adalah yang terbaik dari kami.</p>'
         ]);
     }
 }

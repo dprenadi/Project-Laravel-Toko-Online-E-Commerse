@@ -33,6 +33,7 @@
                       <div class="col-6 ml-5">
                         <div class="form-group">
                           <label for="address_one">Nama Jalan dan Daerah</label>
+                          <p><small>*sertakan RT/RW bila ada</small></p>
                           <input
                             type="text"
                             class="form-control"
@@ -43,6 +44,7 @@
                         </div>
                         <div class="form-group">
                         <label for="address_two">Alamat Rumah</label>
+                        <p><small>*sertakan kelurahan dan kecamatan</small></p>
                         <input
                           type="text"
                           class="form-control"
