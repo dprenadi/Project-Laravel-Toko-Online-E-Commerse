@@ -35,7 +35,7 @@ Dashboard Store Page
                           Revenue
                         </div>
                         <div class="dashboard-card-subtitle">
-                          Rp {{ $revenue }}
+                          Rp {{ number_format($revenue) }}
                         </div>
                       </div>
                     </div>
@@ -132,11 +132,11 @@ Dashboard Store Page
                   @endforeach
           
             
-        {{-- <div class="row mt-5">
+        <div class="row mt-5">
             <div class="col-md">
-                {{ $buyTransactions->links() }}
+                {{ $transaction_data->links() }}
             </div>
-        </div> --}}
+        </div>
         
         </div>
 

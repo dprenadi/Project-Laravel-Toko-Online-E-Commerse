@@ -54,7 +54,6 @@ Route::get('/categories', [CategoryController::class, 'index'])->name('categorie
 Route::get('/categories/{id}', [CategoryController::class, 'detail'])->name('categories-detail');
 
 Route::get('/details/{id}', [DetailController::class, 'index'])->name('detail');
-Route::post('/details/{id}', [DetailController::class, 'add'])->name('detail-add');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);
@@ -90,6 +89,7 @@ Route::get('/dashboard/setting-account', [DashboardSettingController::class, 'se
 
 // Auth
 Route::group(['middleware' => ['auth']], function() {
+    Route::post('/details/{id}', [DetailController::class, 'add'])->name('detail-add');
     Route::get('/cart', [CartController::class, 'index'])->name('cart');
     Route::delete('/cart/{id}', [CartController::class, 'delete'])->name('cart-delete');
     

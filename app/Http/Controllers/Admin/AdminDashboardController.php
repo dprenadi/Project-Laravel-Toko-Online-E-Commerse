@@ -17,7 +17,7 @@ class AdminDashboardController extends Controller
         // $revenue = Transaction::where('transaction_status', 'SUCCESS')->sum('total_price');
         $revenue = Transaction::sum('total_price');
         $transactions = Transaction::count();
-        $buyTransactions = Transaction::with('user', 'transaction_detail')->where('users_id', Auth::user()->id);
+        $buyTransactions = Transaction::with('user', 'transaction_detail');
         // $transaction_count = Transaction::with('transaction_detail')->where('transactions_id', $id)->count();
         // $trans = TransactionDetail::with(['transaction.user','product.galleries'])
         //                     ->whereHas('product', function($product){
