@@ -34,4 +34,15 @@ class AdminDashboardController extends Controller
             ->latest()->paginate(4),
         ]);
     }
+
+    public function cetakPdf(Request $request, $tglawal, $tglakhir)
+    {
+        // dd(["Tgl Awal : ".$tglawal, "Tgl Akhir : ".$tglakhir]);
+        $cetakPdf = Transaction::where('created_at',[$tglawal, $tglakhir])->get();
+        return view('pages.admin.cetakPdf', [
+            'cetakPdf' => $cetakPdf,
+            'tglawal' => $request->tglawal,
+            'tglakhir' => $request->tglakhir
+        ]);
+    }
 }

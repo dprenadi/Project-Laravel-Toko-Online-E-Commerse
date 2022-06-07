@@ -16,8 +16,8 @@ class RegisterController extends Controller
     {
         
         return view('auth.register', [
-            'provinces' => Province::all(),
-            'regencies' => Regency::all()
+            // 'provinces' => Province::all(),
+            // 'regencies' => Regency::all()
         ]);
     }
 

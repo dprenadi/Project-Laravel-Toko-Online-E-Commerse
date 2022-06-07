@@ -49,6 +49,16 @@ Store Homepage
         </div>
       </section> --}}
 
+      @auth
+      <div class="row justify-content-center">
+        <div class="col-md-5">
+          <div class="alert alert-warning text-center" role="alert">
+            Mengisi Kuisonser untuk <a href="/usability" class="alert-link">Usability Testing</a>
+          </div>
+        </div>
+      </div>
+      @endauth
+
       <div class="row justify-content-center mb-3 mt-5">
         <div class="col-md-8">
             <form action="/">
@@ -112,16 +122,17 @@ Store Homepage
             </div>
           </div>
           <div class="row">
-            @php
+            {{-- @php
                 $incrementProduct = 0
-            @endphp
+            @endphp --}}
             @forelse ($products as $product)
             {{-- PRODUCT  --}}
             <div
               class="col-6 col-md-4 col-lg-3"
               {{-- class="col-md-2" --}}
-              data-aos="fade-up"
-              data-aos-delay="{{ $incrementProduct+= 100 }}">
+              {{-- data-aos="fade-up" --}}
+              {{-- data-aos-delay="{{ $incrementProduct+= 100 }}" --}}
+              >
               <a href="/details/{{ $product->slug }}" class="component-products d-block">
                 {{-- {{ route('detail', $product->slug) }} --}}
                 {{-- <div class="card shadow bg-body rounded">

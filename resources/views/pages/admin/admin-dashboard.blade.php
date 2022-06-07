@@ -32,7 +32,7 @@ Dashboard Store Page
                     <div class="card mb-2">
                       <div class="card-body">
                         <div class="dashboard-card-title">
-                          Revenue
+                          Pendapatan
                         </div>
                         <div class="dashboard-card-subtitle">
                           Rp {{ number_format($revenue) }}
@@ -44,7 +44,7 @@ Dashboard Store Page
                     <div class="card mb-2">
                       <div class="card-body">
                         <div class="dashboard-card-title">
-                          Transaction
+                          Transaksi
                         </div>
                         <div class="dashboard-card-subtitle">
                           {{ $transactions }}
@@ -130,6 +130,27 @@ Dashboard Store Page
                     </div>
                   </a>
                   @endforeach
+
+        <div class="row">
+          <div class="col-md-5">
+            <div class="card">
+              <div class="card-body">
+                <h3>Cetak Laporan</h3>
+                <div class="mb-3">
+                  <label for="label" class="form-label">Tanggal Awal</label>
+                  <input type="date" name="tglawal" class="form-control" id="tglawal">
+                </div>
+                <div class="mb-3">
+                  <label for="label" class="form-label">Tanggal Akhir</label>
+                  <input type="date" name="tglakhir" class="form-control" id="tglakhir">
+                </div>
+                <div class="mb-3">
+                  <a href="" onclick="this.href='/admin/cetak-pdf/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value " target="_blank" class="btn btn-sm btn-info">Cetak Pdf</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
           
             
         <div class="row mt-5">

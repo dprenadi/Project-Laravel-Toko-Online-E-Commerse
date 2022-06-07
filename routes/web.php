@@ -28,6 +28,7 @@ use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TransactionDetailController;
+use App\Http\Controllers\UsabilityController;
 use Illuminate\Support\Facades\Route;
 use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
@@ -108,6 +109,12 @@ Route::group(['middleware' => ['auth']], function() {
     //Comment
     Route::post('/comment', [CommentController::class, 'comment']);
     // Route::get('/countComment/{id}', [CommentController::class, 'countComment']);
+
+    // Route::resource('/usability', UsabilityController::class);
+    Route::get('/usability', [UsabilityController::class, 'index']);
+    Route::post('/usability', [UsabilityController::class, 'store']);
+
+    Route::get('/usability/admin', [UsabilityController::class, 'admin']);
     
 });
 // End Auth
@@ -121,6 +128,7 @@ Route::prefix('admin')
     ->middleware(['auth','admin'])
     ->group(function () {
     Route::get('/', [AdminDashboardController::class, 'index'])->name('admin-dashboard');
+    Route::get('/cetak-pdf/{tglawal}/{tglakhir}', [AdminDashboardController::class, 'cetakPdf']);
     Route::resource('/category', AdminCategoryController::class);
     Route::resource('/user', UserController::class);
     Route::resource('/product', ProductController::class);

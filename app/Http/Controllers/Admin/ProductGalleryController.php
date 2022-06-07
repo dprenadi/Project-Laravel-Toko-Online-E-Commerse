@@ -86,6 +86,7 @@ class ProductGalleryController extends Controller
         ProductGallery::create($data);
 
         return redirect('/admin/product-gallery');
+        // return back();
     }
 
     /**

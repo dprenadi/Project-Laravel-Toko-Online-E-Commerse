@@ -85,6 +85,7 @@ class AdminCategoryController extends Controller
         Category::create($data);
 
         return redirect('/admin/category');
+        // return back();
     }
 
     /**
